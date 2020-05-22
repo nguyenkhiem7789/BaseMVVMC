@@ -16,6 +16,8 @@ class ProductListingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var searchTextField: DesignableTextField!
+
     var viewModel: ProductListingViewModel? = nil
 
     var arrayProduct = [Product]()
@@ -44,6 +46,7 @@ class ProductListingViewController: UIViewController {
         setupBinding()
         Loading.shared.show()
         loadData(query: "")
+        search()
     }
 
     private func loadData(query: String) {
@@ -94,6 +97,24 @@ class ProductListingViewController: UIViewController {
             self.checkDisplayEmptyView()
         }).disposed(by: disposeBag)
 
+    }
+
+    ///listener search
+    private func search() {
+        searchTextField
+            .rx
+            .text
+            .map {$0!}
+            .distinctUntilChanged()
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
+            .subscribe(onNext: {
+                [weak self] query in
+                guard let self = self else { return }
+                Loading.shared.show()
+                self.currentPage = 1
+                self.loadData(query: query)
+            })
+            .disposed(by: disposeBag)
     }
 
     private func checkDisplayEmptyView() {

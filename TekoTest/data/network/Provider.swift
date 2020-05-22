@@ -58,7 +58,9 @@ extension Provider {
             return JSONEncoding.prettyPrinted
         }()
 
-        alamofireManager?.request(url, method: api.method, parameters: parameters, encoding: finalEncoding, headers: finalHeaders).responseJSON(completionHandler: { (response) in
+        alamofireManager?.request(url, method: api.method, parameters: parameters, encoding: finalEncoding, headers: finalHeaders).cURLDescription(calling: { (curl) in
+            print(curl)
+        }) .responseJSON(completionHandler: { (response) in
             switch response.result {
             case .success(let data):
                 completion?(true, nil, data)

@@ -39,6 +39,7 @@
 		1809A4FC2476A43100BABBDE /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FB2476A43100BABBDE /* Localizable.swift */; };
 		1809A4FE2476A4E700BABBDE /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */; };
 		1809A5002476A75000BABBDE /* AnimateloadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FF2476A75000BABBDE /* AnimateloadingView.swift */; };
+		188D74DA2477609C00C7BC09 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188D74DC2477609C00C7BC09 /* Localizable.strings */; };
 		18CB47A4247735E6007606C3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB47A3247735E6007606C3 /* DesignableTextField.swift */; };
 		77E369B2DA895D62B67A0895 /* Pods_TekoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB513F92C4923045A8127018 /* Pods_TekoTest.framework */; };
 		B7071E672C3E150C945E8926 /* Pods_TekoTest_TekoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9F79F8E6D233A2397C6BB2 /* Pods_TekoTest_TekoTestUITests.framework */; };
@@ -99,7 +100,11 @@
 		1809A4FB2476A43100BABBDE /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		1809A4FF2476A75000BABBDE /* AnimateloadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateloadingView.swift; sourceTree = "<group>"; };
+		188D74DB2477609C00C7BC09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		188D74DD2477609F00C7BC09 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18CB47A3247735E6007606C3 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		18CB47A524775344007606C3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		18CB47A624775345007606C3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		33FD3697612B3B39DF078AD9 /* Pods-TekoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTestTests.release.xcconfig"; path = "Target Support Files/Pods-TekoTestTests/Pods-TekoTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C3C77721CF37BD4D642092F /* Pods-TekoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TekoTestTests/Pods-TekoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4363DF922FF34438DC03336A /* Pods-TekoTest-TekoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTest-TekoTestUITests.release.xcconfig"; path = "Target Support Files/Pods-TekoTest-TekoTestUITests/Pods-TekoTest-TekoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +178,7 @@
 				1809A4982476975200BABBDE /* Assets.xcassets */,
 				1809A49A2476975200BABBDE /* LaunchScreen.storyboard */,
 				1809A49D2476975200BABBDE /* Info.plist */,
+				188D74DC2477609C00C7BC09 /* Localizable.strings */,
 			);
 			path = TekoTest;
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 1809A4832476974D00BABBDE;
 			productRefGroup = 1809A48D2476974D00BABBDE /* Products */;
@@ -494,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1809A49C2476975200BABBDE /* LaunchScreen.storyboard in Resources */,
+				188D74DA2477609C00C7BC09 /* Localizable.strings in Resources */,
 				1809A4E124769E5800BABBDE /* LoadingView.xib in Resources */,
 				1809A4992476975200BABBDE /* Assets.xcassets in Resources */,
 				1809A4972476974D00BABBDE /* Main.storyboard in Resources */,
@@ -689,6 +697,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				1809A4962476974D00BABBDE /* Base */,
+				18CB47A524775344007606C3 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -697,8 +706,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				1809A49B2476975200BABBDE /* Base */,
+				18CB47A624775345007606C3 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		188D74DC2477609C00C7BC09 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				188D74DB2477609C00C7BC09 /* en */,
+				188D74DD2477609F00C7BC09 /* vi */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -708,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -768,6 +788,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

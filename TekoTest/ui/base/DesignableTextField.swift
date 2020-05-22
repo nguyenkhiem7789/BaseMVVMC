@@ -78,7 +78,8 @@ class DesignableTextField: UITextField {
         self.layer.borderColor = borderColor.cgColor
         self.layer.backgroundColor = bgColor.cgColor
         self.layer.cornerRadius = cornerRadius
-
+        self.placeholder = self.placeholder?.localized
+        
         ///left image
         leftImageView.frame = CGRect(x: 0.0, y: 0.0, width: widthImage, height: self.frame.size.height)
         leftImageView.contentMode = .center

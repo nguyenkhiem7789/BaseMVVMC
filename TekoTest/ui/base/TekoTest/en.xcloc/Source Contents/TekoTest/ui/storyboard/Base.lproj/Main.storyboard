@@ -54,7 +54,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="holder_search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMg-lQ-l7T" customClass="DesignableTextField" customModule="TekoTest" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMg-lQ-l7T" customClass="DesignableTextField" customModule="TekoTest" customModuleProvider="target">
                                         <rect key="frame" x="44" y="4" width="362" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>

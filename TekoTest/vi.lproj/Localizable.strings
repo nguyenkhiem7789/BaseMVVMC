@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TekoTest
+
+  Created by Nguyen on 5/22/20.
+  Copyright © 2020 Apple. All rights reserved.
+*/
+
+"holder_search" = "Nhập tên, mã sản phẩm";

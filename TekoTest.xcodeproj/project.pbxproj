@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17299D305E7E44E4307B7BE8 /* Pods_TekoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB98705E0B3004AE3272E894 /* Pods_TekoTestTests.framework */; };
 		1809A4902476974D00BABBDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A48F2476974D00BABBDE /* AppDelegate.swift */; };
 		1809A4922476974D00BABBDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4912476974D00BABBDE /* SceneDelegate.swift */; };
 		1809A4942476974D00BABBDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4932476974D00BABBDE /* ViewController.swift */; };
@@ -15,6 +16,32 @@
 		1809A49C2476975200BABBDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1809A49A2476975200BABBDE /* LaunchScreen.storyboard */; };
 		1809A4A72476975300BABBDE /* TekoTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4A62476975300BABBDE /* TekoTestTests.swift */; };
 		1809A4B22476975300BABBDE /* TekoTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4B12476975300BABBDE /* TekoTestUITests.swift */; };
+		1809A4C924769A2300BABBDE /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4C524769A2300BABBDE /* Provider.swift */; };
+		1809A4CA24769A2300BABBDE /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4C624769A2300BABBDE /* TargetType.swift */; };
+		1809A4CB24769A2300BABBDE /* CommonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4C724769A2300BABBDE /* CommonError.swift */; };
+		1809A4CC24769A2300BABBDE /* ClientApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4C824769A2300BABBDE /* ClientApi.swift */; };
+		1809A4D224769C8F00BABBDE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4D124769C8F00BABBDE /* BaseViewModel.swift */; };
+		1809A4D824769D4300BABBDE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4D424769D4300BABBDE /* AppCoordinator.swift */; };
+		1809A4D924769D4300BABBDE /* TransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4D524769D4300BABBDE /* TransitioningDelegate.swift */; };
+		1809A4DA24769D4300BABBDE /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4D624769D4300BABBDE /* NavigationControllerDelegate.swift */; };
+		1809A4DB24769D4300BABBDE /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4D724769D4300BABBDE /* AnimatedTransitioning.swift */; };
+		1809A4E024769E5800BABBDE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4DE24769E5800BABBDE /* LoadingView.swift */; };
+		1809A4E124769E5800BABBDE /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1809A4DF24769E5800BABBDE /* LoadingView.xib */; };
+		1809A4E524769EB000BABBDE /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1809A4E324769EB000BABBDE /* EmptyView.xib */; };
+		1809A4E624769EB000BABBDE /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4E424769EB000BABBDE /* EmptyView.swift */; };
+		1809A4E824769F3300BABBDE /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4E724769F3300BABBDE /* AppUtils.swift */; };
+		1809A4EA24769F6900BABBDE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4E924769F6900BABBDE /* Constant.swift */; };
+		1809A4F22476A18100BABBDE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4EF2476A18100BABBDE /* SplashViewController.swift */; };
+		1809A4F42476A18100BABBDE /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4F12476A18100BABBDE /* SplashCoordinator.swift */; };
+		1809A4F62476A2BC00BABBDE /* ProductListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4F52476A2BC00BABBDE /* ProductListingViewController.swift */; };
+		1809A4F82476A2D200BABBDE /* ProductListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4F72476A2D200BABBDE /* ProductListingViewModel.swift */; };
+		1809A4FA2476A2F100BABBDE /* ProductListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4F92476A2F100BABBDE /* ProductListingCoordinator.swift */; };
+		1809A4FC2476A43100BABBDE /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FB2476A43100BABBDE /* Localizable.swift */; };
+		1809A4FE2476A4E700BABBDE /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */; };
+		1809A5002476A75000BABBDE /* AnimateloadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FF2476A75000BABBDE /* AnimateloadingView.swift */; };
+		18CB47A4247735E6007606C3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB47A3247735E6007606C3 /* DesignableTextField.swift */; };
+		77E369B2DA895D62B67A0895 /* Pods_TekoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB513F92C4923045A8127018 /* Pods_TekoTest.framework */; };
+		B7071E672C3E150C945E8926 /* Pods_TekoTest_TekoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9F79F8E6D233A2397C6BB2 /* Pods_TekoTest_TekoTestUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +76,39 @@
 		1809A4AD2476975300BABBDE /* TekoTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TekoTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1809A4B12476975300BABBDE /* TekoTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekoTestUITests.swift; sourceTree = "<group>"; };
 		1809A4B32476975300BABBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1809A4C524769A2300BABBDE /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		1809A4C624769A2300BABBDE /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		1809A4C724769A2300BABBDE /* CommonError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonError.swift; sourceTree = "<group>"; };
+		1809A4C824769A2300BABBDE /* ClientApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientApi.swift; sourceTree = "<group>"; };
+		1809A4D124769C8F00BABBDE /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		1809A4D424769D4300BABBDE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1809A4D524769D4300BABBDE /* TransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitioningDelegate.swift; sourceTree = "<group>"; };
+		1809A4D624769D4300BABBDE /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		1809A4D724769D4300BABBDE /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
+		1809A4DE24769E5800BABBDE /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1809A4DF24769E5800BABBDE /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		1809A4E324769EB000BABBDE /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		1809A4E424769EB000BABBDE /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		1809A4E724769F3300BABBDE /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		1809A4E924769F6900BABBDE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		1809A4EF2476A18100BABBDE /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		1809A4F12476A18100BABBDE /* SplashCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		1809A4F52476A2BC00BABBDE /* ProductListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingViewController.swift; sourceTree = "<group>"; };
+		1809A4F72476A2D200BABBDE /* ProductListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingViewModel.swift; sourceTree = "<group>"; };
+		1809A4F92476A2F100BABBDE /* ProductListingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingCoordinator.swift; sourceTree = "<group>"; };
+		1809A4FB2476A43100BABBDE /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
+		1809A4FF2476A75000BABBDE /* AnimateloadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateloadingView.swift; sourceTree = "<group>"; };
+		18CB47A3247735E6007606C3 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		33FD3697612B3B39DF078AD9 /* Pods-TekoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTestTests.release.xcconfig"; path = "Target Support Files/Pods-TekoTestTests/Pods-TekoTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C3C77721CF37BD4D642092F /* Pods-TekoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TekoTestTests/Pods-TekoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4363DF922FF34438DC03336A /* Pods-TekoTest-TekoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTest-TekoTestUITests.release.xcconfig"; path = "Target Support Files/Pods-TekoTest-TekoTestUITests/Pods-TekoTest-TekoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		79C6A756281C9A431E7D4D62 /* Pods-TekoTest-TekoTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTest-TekoTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-TekoTest-TekoTestUITests/Pods-TekoTest-TekoTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF53BD815A6EBADE3D1149D8 /* Pods-TekoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTest.release.xcconfig"; path = "Target Support Files/Pods-TekoTest/Pods-TekoTest.release.xcconfig"; sourceTree = "<group>"; };
+		AF92BCFCE872B9EEF9EE9077 /* Pods-TekoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTest.debug.xcconfig"; path = "Target Support Files/Pods-TekoTest/Pods-TekoTest.debug.xcconfig"; sourceTree = "<group>"; };
+		DD9F79F8E6D233A2397C6BB2 /* Pods_TekoTest_TekoTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoTest_TekoTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB513F92C4923045A8127018 /* Pods_TekoTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB98705E0B3004AE3272E894 /* Pods_TekoTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E369B2DA895D62B67A0895 /* Pods_TekoTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17299D305E7E44E4307B7BE8 /* Pods_TekoTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7071E672C3E150C945E8926 /* Pods_TekoTest_TekoTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +146,8 @@
 				1809A4A52476975300BABBDE /* TekoTestTests */,
 				1809A4B02476975300BABBDE /* TekoTestUITests */,
 				1809A48D2476974D00BABBDE /* Products */,
+				1C391F446AB9536BA8529D7D /* Pods */,
+				6F6F2F43633EA88536EFD847 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +164,12 @@
 		1809A48E2476974D00BABBDE /* TekoTest */ = {
 			isa = PBXGroup;
 			children = (
+				1809A4D024769C6900BABBDE /* utils */,
+				1809A4CD24769C2700BABBDE /* ui */,
+				1809A4BF2476997000BABBDE /* data */,
 				1809A48F2476974D00BABBDE /* AppDelegate.swift */,
 				1809A4912476974D00BABBDE /* SceneDelegate.swift */,
 				1809A4932476974D00BABBDE /* ViewController.swift */,
-				1809A4952476974D00BABBDE /* Main.storyboard */,
 				1809A4982476975200BABBDE /* Assets.xcassets */,
 				1809A49A2476975200BABBDE /* LaunchScreen.storyboard */,
 				1809A49D2476975200BABBDE /* Info.plist */,
@@ -128,6 +195,195 @@
 			path = TekoTestUITests;
 			sourceTree = "<group>";
 		};
+		1809A4BF2476997000BABBDE /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4C4247699E800BABBDE /* network */,
+				1809A4C1247699B800BABBDE /* model */,
+				1809A4C0247699A700BABBDE /* dataTemp */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		1809A4C0247699A700BABBDE /* dataTemp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = dataTemp;
+			sourceTree = "<group>";
+		};
+		1809A4C1247699B800BABBDE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4C3247699D600BABBDE /* request */,
+				1809A4C2247699CE00BABBDE /* response */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		1809A4C2247699CE00BABBDE /* response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = response;
+			sourceTree = "<group>";
+		};
+		1809A4C3247699D600BABBDE /* request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		1809A4C4247699E800BABBDE /* network */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4C824769A2300BABBDE /* ClientApi.swift */,
+				1809A4C724769A2300BABBDE /* CommonError.swift */,
+				1809A4C524769A2300BABBDE /* Provider.swift */,
+				1809A4C624769A2300BABBDE /* TargetType.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		1809A4CD24769C2700BABBDE /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4EE2476A08E00BABBDE /* productDetail */,
+				1809A4ED2476A07F00BABBDE /* productListing */,
+				1809A4EC2476A00B00BABBDE /* splash */,
+				1809A4CF24769C5900BABBDE /* storyboard */,
+				1809A4CE24769C3700BABBDE /* base */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		1809A4CE24769C3700BABBDE /* base */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4E224769E8B00BABBDE /* emptyView */,
+				1809A4DC24769DA600BABBDE /* loading */,
+				1809A4D324769CFC00BABBDE /* coordinators */,
+				1809A4D124769C8F00BABBDE /* BaseViewModel.swift */,
+				18CB47A3247735E6007606C3 /* DesignableTextField.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		1809A4CF24769C5900BABBDE /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4952476974D00BABBDE /* Main.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		1809A4D024769C6900BABBDE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4FB2476A43100BABBDE /* Localizable.swift */,
+				1809A4EB24769FC800BABBDE /* extension */,
+				1809A4E724769F3300BABBDE /* AppUtils.swift */,
+				1809A4E924769F6900BABBDE /* Constant.swift */,
+				1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		1809A4D324769CFC00BABBDE /* coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4D724769D4300BABBDE /* AnimatedTransitioning.swift */,
+				1809A4D424769D4300BABBDE /* AppCoordinator.swift */,
+				1809A4D624769D4300BABBDE /* NavigationControllerDelegate.swift */,
+				1809A4D524769D4300BABBDE /* TransitioningDelegate.swift */,
+			);
+			path = coordinators;
+			sourceTree = "<group>";
+		};
+		1809A4DC24769DA600BABBDE /* loading */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4FF2476A75000BABBDE /* AnimateloadingView.swift */,
+				1809A4DE24769E5800BABBDE /* LoadingView.swift */,
+				1809A4DF24769E5800BABBDE /* LoadingView.xib */,
+			);
+			path = loading;
+			sourceTree = "<group>";
+		};
+		1809A4E224769E8B00BABBDE /* emptyView */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4E424769EB000BABBDE /* EmptyView.swift */,
+				1809A4E324769EB000BABBDE /* EmptyView.xib */,
+			);
+			path = emptyView;
+			sourceTree = "<group>";
+		};
+		1809A4EB24769FC800BABBDE /* extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		1809A4EC2476A00B00BABBDE /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				1809A4F12476A18100BABBDE /* SplashCoordinator.swift */,
+				1809A4EF2476A18100BABBDE /* SplashViewController.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		1809A4ED2476A07F00BABBDE /* productListing */ = {
+			isa = PBXGroup;
+			children = (
+				18EC38FC2476BA6300B7969B /* view */,
+				1809A4F52476A2BC00BABBDE /* ProductListingViewController.swift */,
+				1809A4F72476A2D200BABBDE /* ProductListingViewModel.swift */,
+				1809A4F92476A2F100BABBDE /* ProductListingCoordinator.swift */,
+			);
+			path = productListing;
+			sourceTree = "<group>";
+		};
+		1809A4EE2476A08E00BABBDE /* productDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = productDetail;
+			sourceTree = "<group>";
+		};
+		18EC38FC2476BA6300B7969B /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1C391F446AB9536BA8529D7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF92BCFCE872B9EEF9EE9077 /* Pods-TekoTest.debug.xcconfig */,
+				AF53BD815A6EBADE3D1149D8 /* Pods-TekoTest.release.xcconfig */,
+				79C6A756281C9A431E7D4D62 /* Pods-TekoTest-TekoTestUITests.debug.xcconfig */,
+				4363DF922FF34438DC03336A /* Pods-TekoTest-TekoTestUITests.release.xcconfig */,
+				3C3C77721CF37BD4D642092F /* Pods-TekoTestTests.debug.xcconfig */,
+				33FD3697612B3B39DF078AD9 /* Pods-TekoTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F6F2F43633EA88536EFD847 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB513F92C4923045A8127018 /* Pods_TekoTest.framework */,
+				DD9F79F8E6D233A2397C6BB2 /* Pods_TekoTest_TekoTestUITests.framework */,
+				FB98705E0B3004AE3272E894 /* Pods_TekoTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +391,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1809A4B62476975300BABBDE /* Build configuration list for PBXNativeTarget "TekoTest" */;
 			buildPhases = (
+				D47309EAFCF274BFE8B80B3E /* [CP] Check Pods Manifest.lock */,
 				1809A4882476974D00BABBDE /* Sources */,
 				1809A4892476974D00BABBDE /* Frameworks */,
 				1809A48A2476974D00BABBDE /* Resources */,
+				2CA4E70A040855BFABC4C9E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +410,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1809A4B92476975300BABBDE /* Build configuration list for PBXNativeTarget "TekoTestTests" */;
 			buildPhases = (
+				005BBBF66803A92FF379D92F /* [CP] Check Pods Manifest.lock */,
 				1809A49E2476975300BABBDE /* Sources */,
 				1809A49F2476975300BABBDE /* Frameworks */,
 				1809A4A02476975300BABBDE /* Resources */,
@@ -170,9 +429,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1809A4BC2476975300BABBDE /* Build configuration list for PBXNativeTarget "TekoTestUITests" */;
 			buildPhases = (
+				6D1737D30B4D078376DA6D03 /* [CP] Check Pods Manifest.lock */,
 				1809A4A92476975300BABBDE /* Sources */,
 				1809A4AA2476975300BABBDE /* Frameworks */,
 				1809A4AB2476975300BABBDE /* Resources */,
+				B5EF7C72F4DE5C1C09BD0584 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,8 +494,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1809A49C2476975200BABBDE /* LaunchScreen.storyboard in Resources */,
+				1809A4E124769E5800BABBDE /* LoadingView.xib in Resources */,
 				1809A4992476975200BABBDE /* Assets.xcassets in Resources */,
 				1809A4972476974D00BABBDE /* Main.storyboard in Resources */,
+				1809A4E524769EB000BABBDE /* EmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +517,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		005BBBF66803A92FF379D92F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekoTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CA4E70A040855BFABC4C9E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoTest/Pods-TekoTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoTest/Pods-TekoTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TekoTest/Pods-TekoTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D1737D30B4D078376DA6D03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekoTest-TekoTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5EF7C72F4DE5C1C09BD0584 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoTest-TekoTestUITests/Pods-TekoTest-TekoTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoTest-TekoTestUITests/Pods-TekoTest-TekoTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TekoTest-TekoTestUITests/Pods-TekoTest-TekoTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D47309EAFCF274BFE8B80B3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekoTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1809A4882476974D00BABBDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1809A4FC2476A43100BABBDE /* Localizable.swift in Sources */,
+				1809A4E824769F3300BABBDE /* AppUtils.swift in Sources */,
+				18CB47A4247735E6007606C3 /* DesignableTextField.swift in Sources */,
+				1809A4D924769D4300BABBDE /* TransitioningDelegate.swift in Sources */,
+				1809A5002476A75000BABBDE /* AnimateloadingView.swift in Sources */,
+				1809A4CA24769A2300BABBDE /* TargetType.swift in Sources */,
+				1809A4F22476A18100BABBDE /* SplashViewController.swift in Sources */,
+				1809A4F42476A18100BABBDE /* SplashCoordinator.swift in Sources */,
+				1809A4FE2476A4E700BABBDE /* UserDefaultUtils.swift in Sources */,
+				1809A4EA24769F6900BABBDE /* Constant.swift in Sources */,
+				1809A4DB24769D4300BABBDE /* AnimatedTransitioning.swift in Sources */,
+				1809A4CB24769A2300BABBDE /* CommonError.swift in Sources */,
+				1809A4CC24769A2300BABBDE /* ClientApi.swift in Sources */,
+				1809A4C924769A2300BABBDE /* Provider.swift in Sources */,
+				1809A4F62476A2BC00BABBDE /* ProductListingViewController.swift in Sources */,
+				1809A4F82476A2D200BABBDE /* ProductListingViewModel.swift in Sources */,
 				1809A4942476974D00BABBDE /* ViewController.swift in Sources */,
+				1809A4D224769C8F00BABBDE /* BaseViewModel.swift in Sources */,
+				1809A4DA24769D4300BABBDE /* NavigationControllerDelegate.swift in Sources */,
+				1809A4D824769D4300BABBDE /* AppCoordinator.swift in Sources */,
 				1809A4902476974D00BABBDE /* AppDelegate.swift in Sources */,
+				1809A4E024769E5800BABBDE /* LoadingView.swift in Sources */,
+				1809A4FA2476A2F100BABBDE /* ProductListingCoordinator.swift in Sources */,
+				1809A4E624769EB000BABBDE /* EmptyView.swift in Sources */,
 				1809A4922476974D00BABBDE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +754,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +808,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,6 +820,7 @@
 		};
 		1809A4B72476975300BABBDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF92BCFCE872B9EEF9EE9077 /* Pods-TekoTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +839,7 @@
 		};
 		1809A4B82476975300BABBDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF53BD815A6EBADE3D1149D8 /* Pods-TekoTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +858,7 @@
 		};
 		1809A4BA2476975300BABBDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C3C77721CF37BD4D642092F /* Pods-TekoTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +881,7 @@
 		};
 		1809A4BB2476975300BABBDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33FD3697612B3B39DF078AD9 /* Pods-TekoTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +904,7 @@
 		};
 		1809A4BD2476975300BABBDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C6A756281C9A431E7D4D62 /* Pods-TekoTest-TekoTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +925,7 @@
 		};
 		1809A4BE2476975300BABBDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4363DF922FF34438DC03336A /* Pods-TekoTest-TekoTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

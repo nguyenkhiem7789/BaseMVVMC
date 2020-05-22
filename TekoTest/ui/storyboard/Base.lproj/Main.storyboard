@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SplashViewController" customModule="TekoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Eaq-3H-UTW">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LE1-w5-zUJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="uqe-oh-TAI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eaq-3H-UTW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Az-ak-Mjb"/>
+                            <constraint firstItem="Eaq-3H-UTW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9GM-yr-Nzq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+        <!--Product Listing View Controller-->
+        <scene sceneID="AxE-cN-Bfb">
+            <objects>
+                <viewController storyboardIdentifier="ProductListingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rZA-mx-kZn" customClass="ProductListingViewController" customModule="TekoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fao-sj-qOJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eje-yo-FJs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-fG-rCj">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="jIz-G0-ynK"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMg-lQ-l7T" customClass="DesignableTextField" customModule="TekoTest" customModuleProvider="target">
+                                        <rect key="frame" x="44" y="4" width="362" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="search"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="delete"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthImage">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.23137254901960785" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VMg-lQ-l7T" secondAttribute="bottom" constant="4" id="9Du-cK-2ln"/>
+                                    <constraint firstItem="VMg-lQ-l7T" firstAttribute="top" secondItem="Eje-yo-FJs" secondAttribute="top" constant="4" id="Eu5-Qj-tHo"/>
+                                    <constraint firstAttribute="height" constant="44" id="G0t-1j-dt3"/>
+                                    <constraint firstAttribute="trailing" secondItem="VMg-lQ-l7T" secondAttribute="trailing" constant="8" id="I3o-KX-YV8"/>
+                                    <constraint firstItem="VMg-lQ-l7T" firstAttribute="leading" secondItem="4Mq-fG-rCj" secondAttribute="trailing" id="f1O-T7-cXs"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Mq-fG-rCj" secondAttribute="bottom" id="kk3-85-7rO"/>
+                                    <constraint firstItem="4Mq-fG-rCj" firstAttribute="top" secondItem="Eje-yo-FJs" secondAttribute="top" id="qna-z5-Yii"/>
+                                    <constraint firstItem="4Mq-fG-rCj" firstAttribute="leading" secondItem="Eje-yo-FJs" secondAttribute="leading" id="tGq-Ko-ozK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eje-yo-FJs" firstAttribute="trailing" secondItem="kCY-lg-M1N" secondAttribute="trailing" id="Xsu-v5-Ifk"/>
+                            <constraint firstItem="Eje-yo-FJs" firstAttribute="top" secondItem="kCY-lg-M1N" secondAttribute="top" id="fxY-lW-8I1"/>
+                            <constraint firstItem="Eje-yo-FJs" firstAttribute="leading" secondItem="kCY-lg-M1N" secondAttribute="leading" id="xqv-WL-qBw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kCY-lg-M1N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwk-sq-yfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="10" height="16"/>
+        <image name="delete" width="16" height="16"/>
+        <image name="logo" width="131" height="52"/>
+        <image name="search" width="16" height="16"/>
+    </resources>
+</document>

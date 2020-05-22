@@ -1,0 +1,6 @@
+framework module Pods_TekoTest {
+  umbrella header "Pods-TekoTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

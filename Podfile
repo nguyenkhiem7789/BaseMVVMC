@@ -20,7 +20,6 @@ target 'TekoTest' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod "RxGesture"
-  pod 'PullToRefresher'
   pod 'SwiftyJSON'
   pod 'IQKeyboardManagerSwift'
   pod 'Kingfisher'

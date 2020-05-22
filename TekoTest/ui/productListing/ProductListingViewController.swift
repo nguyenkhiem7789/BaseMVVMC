@@ -22,6 +22,10 @@ class ProductListingViewController: UIViewController {
 
     let disposeBag = DisposeBag()
 
+    var currentPage = 1
+
+    var PAGE_SIZE = 10
+
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
         self.tableView.dataSource = self
@@ -29,7 +33,16 @@ class ProductListingViewController: UIViewController {
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 110
         self.tableView.register(UINib(nibName: "ProductListingViewCell", bundle: nil), forCellReuseIdentifier: "ProductListingViewCell")
+        tableView.addPullToRefreshHandler {
+            self.currentPage = 1
+            self.loadData(query: "")
+        }
+        tableView.addInfiniteScrollingWithHandler {
+            self.loadData(query: "")
+        }
+
         setupBinding()
+        Loading.shared.show()
         loadData(query: "")
     }
 
@@ -39,24 +52,24 @@ class ProductListingViewController: UIViewController {
         request.visitorId = ""
         request.query = query
         request.terminal = "CP01"
-        request.page = 1
-        request.limit = 10
+        request.page = currentPage
+        request.limit = PAGE_SIZE
         viewModel?.getListProduct(request: request)
     }
 
-    func checkDisplayEmptyView() {
-        if arrayProduct.count == 0 {
-            EmptyView.shared.show(view: self.tableView)
-            EmptyView.shared.loadDataListener = {
-                [unowned self] in
-
-            }
-        } else {
-            EmptyView.shared.hide()
-        }
-    }
-
     private func setupBinding() {
+        viewModel?.loading.observeOn(MainScheduler.instance)
+        .subscribe(onNext: {
+            [weak self](loading) in
+            if loading {
+                Loading.shared.show()
+            } else {
+                Loading.shared.dimiss()
+                self?.tableView.infiniteScrollingView?.stopAnimating()
+                self?.tableView.pullToRefreshView?.stopAnimating()
+            }
+        }).disposed(by: disposeBag)
+
         viewModel?
         .errorMsg
         .observeOn(MainScheduler.instance)
@@ -70,11 +83,31 @@ class ProductListingViewController: UIViewController {
         .arrayProduct
         .observeOn(MainScheduler.instance)
         .subscribe(onNext: {
-            [unowned self](arrayProduct) in
-            self.arrayProduct = arrayProduct
+            [weak self](arrayProduct) in
+            guard let self = self else { return }
+            if self.currentPage == 1 {
+                self.arrayProduct.removeAll()
+            }
+            self.currentPage += 1
+            self.arrayProduct.append(contentsOf: arrayProduct)
             self.tableView.reloadData()
+            self.checkDisplayEmptyView()
         }).disposed(by: disposeBag)
 
+    }
+
+    private func checkDisplayEmptyView() {
+        if arrayProduct.count == 0 {
+            EmptyView.shared.show(view: self.tableView)
+            EmptyView.shared.loadDataListener = {
+                [unowned self] in
+                Loading.shared.show()
+                self.currentPage = 1
+                self.loadData(query: "")
+            }
+        } else {
+            EmptyView.shared.hide()
+        }
     }
 
 }

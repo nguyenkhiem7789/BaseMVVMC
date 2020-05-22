@@ -29,6 +29,8 @@ class ProductListingViewCell: UITableViewCell {
     func fillData(product: Product) {
         if let arrayImage = product.arrayImage, arrayImage.count > 0, let image = arrayImage[0].url, let url = URL(string: image) {
             productImageView.kf.setImage(with: url)
+        } else {
+            productImageView.image = UIImage(named: "empty")
         }
         nameLabel.text = product.name
         if let sellPrice = product.price?.sellPrice {

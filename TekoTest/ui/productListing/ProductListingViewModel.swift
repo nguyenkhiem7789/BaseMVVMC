@@ -18,8 +18,7 @@ class ProductListingViewModel: BaseViewModel {
     public let errorMsg: PublishSubject<String> = PublishSubject()
     public let arrayProduct: PublishSubject<[Product]> = PublishSubject()
 
-    public func getListProduct(request: ProductListingRequest) {
-        self.loading.onNext(true)
+    public func getListProduct(request: ProductListingRequest) {        
         provider.requestAPIJSON(api: .search(params: request.getParams())) {
         (success, message, data) -> (Void) in
         self.loading.onNext(false)

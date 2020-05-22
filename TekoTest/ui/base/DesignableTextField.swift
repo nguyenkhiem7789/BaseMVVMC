@@ -99,8 +99,6 @@ class DesignableTextField: UITextField {
         let rightPaddingView = UIView(frame: CGRect(x: self.frame.size.width - widthImage, y: 0.0, width: widthImage, height: self.frame.size.height))
         self.rightViewMode = .always
         self.rightView = rightPaddingView
-
-
     }
 
 }

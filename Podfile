@@ -23,5 +23,6 @@ target 'TekoTest' do
   pod 'PullToRefresher'
   pod 'SwiftyJSON'
   pod 'IQKeyboardManagerSwift'
-
+  pod 'Kingfisher'
+  
 end

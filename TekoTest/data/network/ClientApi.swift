@@ -11,7 +11,7 @@ import Alamofire
 
 enum ClientApi {
     
-    case login
+    case search(params: String)
 }
 
 extension ClientApi: TargetType {
@@ -24,16 +24,16 @@ extension ClientApi: TargetType {
     /// The path to be appended to `baseURL` to form the full `URL`.
     var path: String {
         switch self {
-        case .login:
-            return "/api/auth/login_store"
+        case .search(let params):
+            return "search/?".appending(params)
         }
     }
     
     /// The HTTP method used in the request.
     var method: HTTPMethod {
         switch self {
-        case .login:
-            return .post
+        case .search:
+            return .get
         }
     }
     
@@ -41,5 +41,5 @@ extension ClientApi: TargetType {
     var task: Task {
         return .request
     }
-    
+
 }

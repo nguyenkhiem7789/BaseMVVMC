@@ -19,6 +19,10 @@ class DesignableTextField: UITextField {
         return UIImageView()
     }()
 
+    private lazy var rightPaddingView: UIView = {
+        return UIView()
+    }()
+
     @IBInspectable open var borderWidth: CGFloat = 1.0 {
         didSet {
             self.layer.borderWidth = borderWidth
@@ -62,6 +66,8 @@ class DesignableTextField: UITextField {
         }
     }
 
+    var clickRightImageViewListener: (() -> (Void))?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
@@ -96,9 +102,24 @@ class DesignableTextField: UITextField {
         self.addSubview(rightImageView)
 
         ///right padding
-        let rightPaddingView = UIView(frame: CGRect(x: self.frame.size.width - widthImage, y: 0.0, width: widthImage, height: self.frame.size.height))
-        self.rightViewMode = .always
+        rightPaddingView.frame = CGRect(x: self.frame.size.width - widthImage, y: 0.0, width: widthImage, height: self.frame.size.height)
+        self.rightViewMode = .always        
         self.rightView = rightPaddingView
+
+        rightPaddingView.addTapGestureRecognizer(action: { [weak self] in
+            guard let self = self else {return}
+            self.clickRightImageViewListener?()
+        })
+    }
+
+    func displayRightImageView(isDisplay: Bool) {
+        if isDisplay {
+            self.rightView = rightPaddingView
+            self.addSubview(rightImageView)
+        } else {
+            self.rightView = nil
+            self.rightImageView.removeFromSuperview()
+        }
     }
 
 }

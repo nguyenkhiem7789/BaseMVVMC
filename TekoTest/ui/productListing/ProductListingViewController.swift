@@ -28,6 +28,8 @@ class ProductListingViewController: UIViewController {
 
     var PAGE_SIZE = 10
 
+    var query: String = ""
+
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
         self.tableView.dataSource = self
@@ -37,15 +39,15 @@ class ProductListingViewController: UIViewController {
         self.tableView.register(UINib(nibName: "ProductListingViewCell", bundle: nil), forCellReuseIdentifier: "ProductListingViewCell")
         tableView.addPullToRefreshHandler {
             self.currentPage = 1
-            self.loadData(query: "")
+            self.loadData(query: self.query)
         }
         tableView.addInfiniteScrollingWithHandler {
-            self.loadData(query: "")
+            self.loadData(query: self.query)
         }
 
         setupBinding()
         Loading.shared.show()
-        loadData(query: "")
+        loadData(query: self.query)
         search()
     }
 
@@ -110,11 +112,27 @@ class ProductListingViewController: UIViewController {
             .subscribe(onNext: {
                 [weak self] query in
                 guard let self = self else { return }
+                self.query = query
+                if query.count > 0 {
+                    self.searchTextField.displayRightImageView(isDisplay: true)
+                } else {
+                    self.searchTextField.displayRightImageView(isDisplay: false)
+                }
                 Loading.shared.show()
                 self.currentPage = 1
                 self.loadData(query: query)
             })
             .disposed(by: disposeBag)
+
+        searchTextField.clickRightImageViewListener = {
+            [unowned self] in
+            self.query = ""
+            self.searchTextField.text = nil
+            self.searchTextField.displayRightImageView(isDisplay: false)
+            Loading.shared.show()
+            self.currentPage = 1
+            self.loadData(query: self.query)
+        }
     }
 
     private func checkDisplayEmptyView() {
@@ -124,7 +142,7 @@ class ProductListingViewController: UIViewController {
                 [unowned self] in
                 Loading.shared.show()
                 self.currentPage = 1
-                self.loadData(query: "")
+                self.loadData(query: self.query)
             }
         } else {
             EmptyView.shared.hide()

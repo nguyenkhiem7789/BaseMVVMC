@@ -51,7 +51,8 @@ class PromotionView: UIView {
         shapeLayer.position = CGPoint(x: 0.0, y: 0.0)
         self.layer.addSublayer(shapeLayer)
 
-        textLayer.frame = self.bounds
+        textLayer.frame = CGRect(x: self.frame.size.width/7, y: 0.0, width: 6*self.frame.size.width/7
+            , height: self.frame.size.height)
         textLayer.fontSize = 10.0
         textLayer.contentsScale = UIScreen.main.scale
         textLayer.alignmentMode = CATextLayerAlignmentMode.center
@@ -60,7 +61,6 @@ class PromotionView: UIView {
     }
 
     override func layoutSubviews() {
-        
     }
 
     func bgPath() -> UIBezierPath {

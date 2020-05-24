@@ -21,6 +21,10 @@ class ProductListingViewCell: UITableViewCell {
 
     @IBOutlet weak var promotionView: PromotionView!
 
+    @IBOutlet weak var promotionPriceView: UIView!
+
+    @IBOutlet weak var heightPromotionPriceConstraint: NSLayoutConstraint!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -38,6 +42,13 @@ class ProductListingViewCell: UITableViewCell {
         }
         if let supplierSalePrice = product.price?.supplierSalePrice {
             totalPriceLabel.attributedText = supplierSalePrice.formatNumberCurrency()?.strikeThrough()
+        }
+        if let sellPrice = product.price?.sellPrice, let supplierSalePrice = product.price?.supplierSalePrice, sellPrice < supplierSalePrice {
+            let promotion = 100 - Double(round(100 * (sellPrice / supplierSalePrice) )/100) * 100
+            promotionView.text = "-\(Int(promotion))%"
+            promotionPriceView.isHidden = false
+        } else {
+            promotionPriceView.isHidden = true
         }
     }
     

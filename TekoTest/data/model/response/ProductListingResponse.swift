@@ -43,6 +43,8 @@ struct ProuductResult {
 
 struct Product {
 
+    var sku: String?
+
     var name: String?
 
     var price: ProductPrice?
@@ -50,6 +52,8 @@ struct Product {
     var arrayImage: [ProductImage]?
 
     init(json: JSON) {
+
+        sku = json["sku"].string
 
         name = json["name"].string
 

@@ -1,5 +1,11 @@
 PODS:
   - Alamofire (5.2.0)
+  - ImageSlideshow (1.8.3):
+    - ImageSlideshow/Core (= 1.8.3)
+  - ImageSlideshow/Core (1.8.3)
+  - ImageSlideshow/Kingfisher (1.8.3):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
   - IQKeyboardManagerSwift (6.5.5)
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
@@ -14,19 +20,24 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SwiftyJSON (5.0.0)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - ImageSlideshow
+  - ImageSlideshow/Kingfisher
   - IQKeyboardManagerSwift
   - Kingfisher
   - RxCocoa
   - RxGesture
   - RxSwift
   - SwiftyJSON
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ImageSlideshow
     - IQKeyboardManagerSwift
     - Kingfisher
     - RxCocoa
@@ -34,9 +45,11 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SwiftyJSON
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
+  ImageSlideshow: 4694d7d699a1549582e7cc631fb392d8f91630f3
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -44,7 +57,8 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: fa465b00f7db00a7a886bf2abac85cf7342a7f6b
+PODFILE CHECKSUM: 186302f2e60dcccce70a7baf9d9ecb5038858c59
 
 COCOAPODS: 1.9.1

@@ -1,0 +1,58 @@
+{
+    "success": true,
+    "data": [
+        {
+            "key": "Mã sản phẩm",
+            "value": "Sunshine P-1502T"
+        },
+        {
+            "key": "Thời gian bảo hành",
+            "value": "06 Tháng"
+        },
+        {
+            "key": "Tình trạng",
+            "value": "Liên hệ"
+        },
+        {
+            "key": "Xuất xứ",
+            "value": "Chính hãng Sunshine"
+        },
+        {
+            "key": "Khuyến mãi",
+            "value": "9"
+        },
+        {
+            "key": "Điện áp cung cấp",
+            "value": "220V / 50Hz"
+        },
+        {
+            "key": "Điều kiện làm việc",
+            "value": "-10 ° C ~ 80 ° C"
+        },
+        {
+            "key": "Điều kiện bảo quản",
+            "value": "-20 ° C ~ 80 ° C"
+        },
+        {
+            "key": "Điện áp ra",
+            "value": "-20 ° C ~ 80 ° C"
+        },
+        {
+            "key": "Điều kiện bảo quản",
+            "value": "DC điều chỉnh từ 0-15V"
+        },
+        {
+            "key": "Hỗ trợ chuyển đổi",
+            "value": "1A – 2A"
+        },
+        {
+            "key": "Ổn định Điện áp",
+            "value": "<0.01% + 2mV"
+        },
+        {
+            "key": "Thời gian phục hồi",
+            "value": "<100us"
+        }
+    ]
+}
+

@@ -6,4 +6,10 @@
   Copyright © 2020 Apple. All rights reserved.
 */
 
+"kDefaultInternetError" = "Lỗi truy vấn server";
+
 "holder_search" = "Nhập tên, mã sản phẩm";
+
+"more_info" = "Hiển thị nhiều hơn";
+
+"less_info" = "Thu lại";

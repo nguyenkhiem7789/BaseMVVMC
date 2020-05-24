@@ -1,0 +1,38 @@
+{
+    "success": true,
+    "data": [
+        {
+            "name": "Apple Macbook Air 2019 - 13 inchs",
+            "price": 25994000
+        },
+        {
+            "name": "MacBook Air 13.3 inch 2019 128GB MVFH2 Gray",
+            "price": 22399000
+        },
+        {
+            "name": "Laptop Apple Macbook air Rentina 2019 MVFK2LL/A",
+            "price": 27490000
+        },
+        {
+            "name": "MVFH2 - MacBook Air 2019 13'' Core i5",
+            "price": 23490000
+        },
+        {
+            "name": "Apple Macbook Air 2019 - 13 inchs",
+            "price": 25994000
+        },
+        {
+            "name": "MacBook Air 13.3 inch 2019 128GB MVFH2 Gray",
+            "price": 22399000
+        },
+        {
+            "name": "Laptop Apple Macbook air Rentina 2019 MVFK2LL/A",
+            "price": 27490000
+        },
+        {
+            "name": "MVFH2 - MacBook Air 2019 13'' Core i5",
+            "price": 23490000
+        }
+    ]
+}
+

@@ -23,14 +23,27 @@ class ProductListingCoordinator: Coordinator {
 
     func showProductListingViewController() {
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductListingViewController") as? ProductListingViewController {
+            viewController.delegate = self
             let viewModel = ProductListingViewModel()
             viewController.viewModel = viewModel
             self.navigationController!.pushViewController(viewController, animated: true)
         }
     }
 
+    func openProductDetailViewController(sku: String) {
+        let coordinator = ProductDetailCoordinator(navigationController: self.navigationController)
+        coordinator.start(sku: sku)
+    }
+
     deinit {
         print("deallocing \(self)")
+    }
+}
+
+extension ProductListingCoordinator: ProductListingDelegate {
+
+    func openProductDetailScreen(sku: String) {
+        self.openProductDetailViewController(sku: sku)
     }
 
 }

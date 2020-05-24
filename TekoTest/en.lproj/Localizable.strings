@@ -5,4 +5,11 @@
   Created by Nguyen on 5/22/20.
   Copyright © 2020 Apple. All rights reserved.
 */
+
+"kDefaultInternetError" = "Lỗi truy vấn server";
+
 "holder_search" = "Nhập tên, mã sản phẩm";
+
+"more_info" = "Hiển thị nhiều hơn";
+
+"less_info" = "Thu lại";

@@ -12,6 +12,8 @@ import Alamofire
 enum ClientApi {
     
     case search(params: String)
+
+    case getDetailProduct(productSku: String, params: String)
 }
 
 extension ClientApi: TargetType {
@@ -26,6 +28,8 @@ extension ClientApi: TargetType {
         switch self {
         case .search(let params):
             return "search/?".appending(params)
+        case .getDetailProduct(let productSku, let params):
+            return "products/\(productSku)?".appending(params)
         }
     }
     
@@ -33,6 +37,8 @@ extension ClientApi: TargetType {
     var method: HTTPMethod {
         switch self {
         case .search:
+            return .get
+        case .getDetailProduct:
             return .get
         }
     }

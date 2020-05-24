@@ -24,13 +24,13 @@
                             <constraint firstAttribute="height" constant="90" id="GAu-TC-fMT"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ln-yk-Sa8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ln-yk-Sa8">
                         <rect key="frame" x="106" y="16" width="206" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.14976513390000001" green="0.15686687830000001" blue="0.16107773780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.999.000 đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IX-5b-XTg">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IX-5b-XTg">
                         <rect key="frame" x="106" y="49" width="190" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="GmF-iU-8aq"/>
@@ -42,14 +42,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIt-bO-eG7">
                         <rect key="frame" x="106" y="73" width="206" height="24"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.999.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6V-AX-Z6I">
-                                <rect key="frame" x="0.0" y="0.0" width="59" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6V-AX-Z6I">
+                                <rect key="frame" x="0.0" y="0.0" width="6" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.56302034850000005" green="0.58432638650000002" blue="0.59695845839999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-LC-h5i" customClass="PromotionView" customModule="TekoTest" customModuleProvider="target">
-                                <rect key="frame" x="67" y="4.5" width="32" height="15"/>
+                                <rect key="frame" x="14" y="4.5" width="32" height="15"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="iFd-df-yn4"/>
@@ -95,8 +95,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="finalPriceLabel" destination="2IX-5b-XTg" id="Oyg-CK-0n3"/>
+                <outlet property="heightPromotionPriceConstraint" destination="TQE-Ut-cVR" id="s4K-GJ-fE0"/>
                 <outlet property="nameLabel" destination="3Ln-yk-Sa8" id="72b-Lf-usB"/>
                 <outlet property="productImageView" destination="5ef-FA-Bbu" id="r7g-uR-sEm"/>
+                <outlet property="promotionPriceView" destination="wIt-bO-eG7" id="vXF-4r-asg"/>
                 <outlet property="promotionView" destination="n9l-LC-h5i" id="p4d-0Y-tYv"/>
                 <outlet property="totalPriceLabel" destination="J6V-AX-Z6I" id="gkj-3c-3sh"/>
             </connections>

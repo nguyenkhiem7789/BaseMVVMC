@@ -12,6 +12,10 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
+protocol ProductListingDelegate {
+    func openProductDetailScreen(sku: String)
+}
+
 class ProductListingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +33,8 @@ class ProductListingViewController: UIViewController {
     var PAGE_SIZE = 10
 
     var query: String = ""
+
+    var delegate: ProductListingDelegate?
 
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
@@ -161,6 +167,13 @@ extension ProductListingViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductListingViewCell", for: indexPath) as! ProductListingViewCell
         cell.fillData(product: arrayProduct[indexPath.item])
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let sku = arrayProduct[indexPath.item].sku {
+            self.delegate?.openProductDetailScreen(sku: sku)
+        }
     }
 
 }

@@ -23,5 +23,8 @@ target 'TekoTest' do
   pod 'SwiftyJSON'
   pod 'IQKeyboardManagerSwift'
   pod 'Kingfisher'
+  pod 'ImageSlideshow'
+  pod 'ImageSlideshow/Kingfisher'
+  pod 'XLPagerTabStrip', '~> 9.0'
   
 end

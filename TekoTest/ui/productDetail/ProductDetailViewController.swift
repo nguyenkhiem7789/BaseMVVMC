@@ -133,9 +133,8 @@ class ProductDetailViewController: UIViewController {
 
     private func fillData(product: Product) {
         ///image slide
-        if let arrayImage = product.arrayImage {
-            self.loadImageSlide(arrayImage: arrayImage)
-        }
+        let arrayImage = Array(product.arrayImage)
+        self.loadImageSlide(arrayImage: arrayImage)
 
         ///product property
         nameLabel.text = product.name

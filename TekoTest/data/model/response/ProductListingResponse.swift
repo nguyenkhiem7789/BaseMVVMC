@@ -43,14 +43,15 @@ struct ProuductResult {
 }
 
 class Product: Object {
+    @objc var id = UUID().uuidString
 
     @objc dynamic var sku: String = ""
 
     @objc dynamic var name: String = ""
 
-    var price: ProductPrice?
+    @objc dynamic var price: ProductPrice?
 
-    var arrayImage: [ProductImage]?
+    var arrayImage = List<ProductImage>()
 
     convenience init(json: JSON) {
         self.init()
@@ -58,17 +59,18 @@ class Product: Object {
         name = json["name"].string ?? ""
         price = ProductPrice(json: json["price"])
         if let arrayImageJson = json["images"].array {
-           arrayImage = [ProductImage]()
-           for dataJson in arrayImageJson {
-               let image = ProductImage(json: dataJson)
-               arrayImage?.append(image)
-           }
+            for dataJson in arrayImageJson {
+                let image = ProductImage(json: dataJson)
+                arrayImage.append(image)
+            }
         }
     }
 
 }
 
 class ProductImage: Object {
+
+    @objc var id = UUID().uuidString
 
     @objc dynamic var url: String = ""
 
@@ -83,6 +85,8 @@ class ProductImage: Object {
 }
 
 class ProductPrice: Object {
+
+    @objc var id = UUID().uuidString
 
     @objc dynamic var supplierSalePrice: Double = 0.0
 

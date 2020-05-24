@@ -31,7 +31,8 @@ class ProductListingViewCell: UITableViewCell {
     }
 
     func fillData(product: Product) {
-        if let arrayImage = product.arrayImage, arrayImage.count > 0, let url = URL(string: arrayImage[0].url) {
+        let arrayImage = Array(product.arrayImage)
+        if arrayImage.count > 0, let url = URL(string: arrayImage[0].url) {
             productImageView.kf.setImage(with: url)
         } else {
             productImageView.image = UIImage(named: "empty")

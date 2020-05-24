@@ -48,14 +48,24 @@ class RealmManager {
 
      ///Returs an array as Results<object>?
     func getObjects<T: Object>(type: T.Type) -> [T]? {
-        return realm?.objects(type).toArray(type: type)
+        if let results = realm?.objects(type) {
+            return Array(results)
+        }
+        return nil
     }
 
-//    func getObjects(type: Object.Type) -> Results<Object>? {
-//        return realm?.objects(type)
-//    }
+    func getObjectsResults(type: Object.Type) -> Results<Object>? {
+        return realm?.objects(type)
+    }
 
     ///Save a list object
+    func saveArrayObject(objs: [Object]) {
+        try? realm?.write ({
+            /// If update = false, adds the object
+            realm?.add(objs)
+        })
+    }
+
     func saveListObject(objsArray: [Object]) {
         let objectsRealmList = List<Object>()
         for object in objsArray {

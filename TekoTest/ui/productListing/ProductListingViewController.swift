@@ -68,13 +68,13 @@ class ProductListingViewController: UIViewController {
         viewModel?.getListProduct(request: request)
     }
 
+    ///display data from Realm 
     private func getDataCache() {
         if let arrayProduct = RealmManager.shared.getObjects(type: Product.self) {
+            print("XarrayProduct count = \(arrayProduct.count)")
             self.arrayProduct = arrayProduct
             self.tableView.reloadData()
         }
-//        let count = RealmManager.shared.getObjects(type: Product.self)?.count
-//        print("XXXcount = \(count)")
     }
 
     private func setupBinding() {
@@ -105,15 +105,17 @@ class ProductListingViewController: UIViewController {
         .subscribe(onNext: {
             [weak self](arrayProduct) in
             guard let self = self else { return }
-            self.getDataCache()
-//            if self.currentPage == 1 {
-//                self.arrayProduct.removeAll()
-//                RealmManager.shared.deleteListObject(objsArray: self.arrayProduct)
-//            }
-//            self.currentPage += 1
-//            self.arrayProduct.append(contentsOf: arrayProduct)
-//            self.tableView.reloadData()
-//            self.checkDisplayEmptyView()
+            if self.currentPage == 1 {
+                self.arrayProduct.removeAll()
+                RealmManager.shared.deleteListObject(objsArray: self.arrayProduct)
+            }
+            DispatchQueue.main.async {
+                RealmManager.shared.saveArrayObject(objs: arrayProduct)
+            }
+            self.currentPage += 1
+            self.arrayProduct.append(contentsOf: arrayProduct)
+            self.tableView.reloadData()
+            self.checkDisplayEmptyView()
         }).disposed(by: disposeBag)
     }
 

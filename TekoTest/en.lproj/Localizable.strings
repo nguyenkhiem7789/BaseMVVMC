@@ -6,7 +6,7 @@
   Copyright © 2020 Apple. All rights reserved.
 */
 
-"kDefaultInternetError" = "Lỗi truy vấn server";
+"kDefaultInternetError" = "Đã xảy ra vấn đề khi truy cập server.";
 
 "holder_search" = "Nhập tên, mã sản phẩm";
 

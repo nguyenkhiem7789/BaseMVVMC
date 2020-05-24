@@ -46,7 +46,7 @@ class MessageView: UIView {
     func showOnView(message:String,theme:Theme){
         parentView = UIApplication.shared.keyWindow
         parentView.addSubview(self)
-        addMaskView()
+//        addMaskView()
         messageLabel.text = message
         applyTheme(theme: theme)
         self.frame.size = CGSize(width: parentView.frame.width, height: 80)
@@ -55,7 +55,7 @@ class MessageView: UIView {
         UIView.animate(withDuration: 0.2) {
             self.frame = CGRect(x: self.parentView.frame.minX, y: self.parentView.frame.minY, width: self.frame.width, height: self.frame.height)
         }
-        makeDim()
+//        makeDim()
         hideTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(hideView), userInfo: nil, repeats: false)
     }
     private func applyTheme(theme:Theme) {
@@ -90,10 +90,11 @@ class MessageView: UIView {
     @objc func hideView(){
         hideTimer.invalidate()
         UIView.animate(withDuration: 0.2, animations: {
-            self.maskingView.backgroundColor = .clear
+//            self.maskingView.backgroundColor = .clear
             self.frame.origin.y -= 80
         }) { (_) in
-            self.maskingView.removeFromSuperview()
+            print("XXXX ==> hide 111")
+//            self.maskingView.removeFromSuperview()
             self.removeFromSuperview()
         }
     }

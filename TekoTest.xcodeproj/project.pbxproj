@@ -358,6 +358,7 @@
 		1809A4CE24769C3700BABBDE /* base */ = {
 			isa = PBXGroup;
 			children = (
+				18E63251247A631F00194C34 /* designable */,
 				18E63249247A5B5B00194C34 /* numberView */,
 				18C680722478282600EBABF2 /* PullToRefresh */,
 				188D74EA2477930D00C7BC09 /* messageView */,
@@ -365,10 +366,6 @@
 				1809A4DC24769DA600BABBDE /* loading */,
 				1809A4D324769CFC00BABBDE /* coordinators */,
 				1809A4D124769C8F00BABBDE /* BaseViewModel.swift */,
-				18CB47A3247735E6007606C3 /* DesignableTextField.swift */,
-				188D74F32477D61D00C7BC09 /* CenterTextLayer.swift */,
-				18C680882479134B00EBABF2 /* DesignableUILabel.swift */,
-				18E6324E247A60EF00194C34 /* DesignableView.swift */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -514,6 +511,17 @@
 				18E6324A247A5B8F00194C34 /* NumberView.xib */,
 			);
 			path = numberView;
+			sourceTree = "<group>";
+		};
+		18E63251247A631F00194C34 /* designable */ = {
+			isa = PBXGroup;
+			children = (
+				18CB47A3247735E6007606C3 /* DesignableTextField.swift */,
+				188D74F32477D61D00C7BC09 /* CenterTextLayer.swift */,
+				18C680882479134B00EBABF2 /* DesignableUILabel.swift */,
+				18E6324E247A60EF00194C34 /* DesignableView.swift */,
+			);
+			path = designable;
 			sourceTree = "<group>";
 		};
 		18EC38FC2476BA6300B7969B /* view */ = {

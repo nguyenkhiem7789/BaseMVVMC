@@ -26,5 +26,6 @@ target 'TekoTest' do
   pod 'ImageSlideshow'
   pod 'ImageSlideshow/Kingfisher'
   pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'RealmSwift'
   
 end

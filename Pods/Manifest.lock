@@ -10,6 +10,11 @@ PODS:
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
+  - Realm (5.0.0):
+    - Realm/Headers (= 5.0.0)
+  - Realm/Headers (5.0.0)
+  - RealmSwift (5.0.0):
+    - Realm (= 5.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -28,6 +33,7 @@ DEPENDENCIES:
   - ImageSlideshow/Kingfisher
   - IQKeyboardManagerSwift
   - Kingfisher
+  - RealmSwift
   - RxCocoa
   - RxGesture
   - RxSwift
@@ -40,6 +46,8 @@ SPEC REPOS:
     - ImageSlideshow
     - IQKeyboardManagerSwift
     - Kingfisher
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxGesture
     - RxRelay
@@ -52,6 +60,8 @@ SPEC CHECKSUMS:
   ImageSlideshow: 4694d7d699a1549582e7cc631fb392d8f91630f3
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  Realm: 76066d333de26f97e9caedaa85ee3ff4a62ca265
+  RealmSwift: c1bdff09b422569dc6881410d9ccf712bcdb79b0
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -59,6 +69,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 186302f2e60dcccce70a7baf9d9ecb5038858c59
+PODFILE CHECKSUM: 3fcc61b8bd6fef255b1611ea89257dd0e6c19c30
 
 COCOAPODS: 1.9.1

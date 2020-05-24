@@ -1,0 +1,36 @@
+{
+    "success": true,
+    "data": [
+        {
+            "image": "https://galaxydidong.vn/wp-content/uploads/2014/09/iphone-xr-64gb-quoc-te-moi-95-99.jpg",
+            "name": "iphone xr 64g",
+            "finalPrice": 8050000,
+            "totalPrice": 9050000
+        },
+        {
+            "image": "https://galaxydidong.vn/wp-content/uploads/2015/10/iphone-8-plus-256g-quoc-te-moi-95-99-2.png",
+            "name": "iPhone 8 Plus 256G",
+            "finalPrice": 7350000,
+            "totalPrice": 7350000
+        },
+        {
+            "image": "https://galaxydidong.vn/wp-content/uploads/2017/11/iphone-x-64gb-quoc-te-95-99.jpg",
+            "name": "Iphone x 64gb",
+            "finalPrice": 7350000,
+            "totalPrice": 1250000
+        },
+        {
+            "image": "https://galaxydidong.vn/wp-content/uploads/2017/03/iphone-7-plus-128gb-hh-600x600-1.jpg",
+            "name": "iphone 7 plus 128gb",
+            "finalPrice": 8050000,
+            "totalPrice": 8050000
+        },
+        {
+            "image": "https://galaxydidong.vn/wp-content/uploads/2017/07/iphone-7-gold-600x600.jpg",
+            "name": "Iphone 7 128gb quốc tế",
+            "finalPrice": 2850000,
+            "totalPrice": 3050000
+        }
+    ]
+}
+

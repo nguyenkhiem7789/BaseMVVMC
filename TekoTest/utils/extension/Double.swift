@@ -24,7 +24,7 @@ extension Double {
         formater.numberStyle = .decimal
         formater.locale = Locale.current
         if let value = formater.string(from: NSNumber(value: self)) {
-            return value + "đ"
+            return value + "₫"
         } else {
             return nil
         }

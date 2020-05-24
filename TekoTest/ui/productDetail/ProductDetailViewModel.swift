@@ -72,4 +72,14 @@ class ProductDetailViewModel: BaseViewModel {
         return nil
     }
 
+    ///get temp product generic from json file
+    public func getProductGeneric() -> [ProductGeneric]? {
+        if let data = AppUtils.readJSONFromFile(fileName: "product_generic") {
+            let json = JSON(data)
+            let response = ProductGenericResponse(json: json)
+            return response.arrayGeneric
+        }
+        return nil
+    }
+
 }

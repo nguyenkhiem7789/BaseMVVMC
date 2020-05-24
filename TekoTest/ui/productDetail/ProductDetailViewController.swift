@@ -43,6 +43,10 @@ class ProductDetailViewController: UIViewController {
 
     @IBOutlet weak var displayInfoImageView: UIImageView!
 
+    @IBOutlet weak var imageSlideEmpryView: UIImageView!
+
+    @IBOutlet weak var genericProductsView: UICollectionView!
+
     var sku: String?
 
     var viewModel: ProductDetailViewModel?
@@ -54,6 +58,8 @@ class ProductDetailViewController: UIViewController {
     var isExpanding = false
 
     var heightInfoViewStart = CGFloat(200)
+
+    var arrayGenericProsucts = [ProductGeneric]()
 
     override func viewDidLoad() {
         initView()
@@ -73,6 +79,7 @@ class ProductDetailViewController: UIViewController {
                         self.heightInfoConstraint.constant = heightContentInfo
                         self.blurView.isHidden = true
                         self.displayInfoLabel.text = "less_info".localized
+                        self.displayInfoImageView.image = UIImage(named: "chevronUp")
                         self.view.layoutIfNeeded()
                     }
                 } else {
@@ -80,11 +87,17 @@ class ProductDetailViewController: UIViewController {
                     self.heightInfoConstraint.constant = self.heightInfoViewStart
                     self.blurView.isHidden = false
                     self.displayInfoLabel.text = "more_info".localized
+                    self.displayInfoImageView.image = UIImage(named: "chevronDown")
                     self.view.layoutIfNeeded()
                 }
             }
         })
         .disposed(by: disposeBag)
+
+        genericProductsView.delegate = self
+        genericProductsView.dataSource = self
+        let nib = UINib(nibName: "ProductGenericViewCell", bundle: nil)
+        genericProductsView.register(nib, forCellWithReuseIdentifier: "ProductGenericViewCell")
     }
 
     private func loadData() {
@@ -148,26 +161,37 @@ class ProductDetailViewController: UIViewController {
             promotionView.isHidden = true
             totalPriceLabel.isHidden = true
         }
+
+        ///generic products
+        if let arrayGenericProsucts = viewModel?.getProductGeneric() {
+            self.arrayGenericProsucts = arrayGenericProsucts
+            genericProductsView.reloadData()
+        }
     }
 
     ///load image slide
     func loadImageSlide(arrayImage: [ProductImage]) {
         var arraySource = [KingfisherSource]()
-        for i in 0 ..< arrayImage.count {
-            if let path = arrayImage[i].url {
-                if let sourceImage = KingfisherSource(urlString: path) {
-                    arraySource.append(sourceImage)
+        if arrayImage.count > 0 {
+            imageSlideEmpryView.isHidden = true
+            for i in 0 ..< arrayImage.count {
+                if let path = arrayImage[i].url {
+                    if let sourceImage = KingfisherSource(urlString: path) {
+                        arraySource.append(sourceImage)
+                    }
                 }
             }
+            let pageIndicator = UIPageControl()
+            pageIndicator.currentPageIndicatorTintColor = "0xE63B0F".colorWithHexString()
+            pageIndicator.pageIndicatorTintColor = UIColor.lightGray
+            self.imageSlideView.pageIndicator = pageIndicator
+            self.imageSlideView.contentScaleMode = .scaleAspectFill
+            self.imageSlideView.setImageInputs(arraySource)
+            let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapImageSlide))
+            self.imageSlideView.addGestureRecognizer(recognizer)
+        } else {
+            imageSlideEmpryView.isHidden = false
         }
-        let pageIndicator = UIPageControl()
-        pageIndicator.currentPageIndicatorTintColor = "0xE63B0F".colorWithHexString()
-        pageIndicator.pageIndicatorTintColor = UIColor.lightGray
-        self.imageSlideView.pageIndicator = pageIndicator
-        self.imageSlideView.contentScaleMode = .scaleAspectFill
-        self.imageSlideView.setImageInputs(arraySource)
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTapImageSlide))
-        self.imageSlideView.addGestureRecognizer(recognizer)
     }
 
     @objc func didTapImageSlide() {
@@ -192,6 +216,28 @@ class ProductDetailViewController: UIViewController {
                 }
             }
         }
+    }
+
+}
+
+extension ProductDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayGenericProsucts.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductGenericViewCell", for: indexPath) as! ProductGenericViewCell        
+        cell.fillData(generic: arrayGenericProsucts[indexPath.item])
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 180, height: 300)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 
 }

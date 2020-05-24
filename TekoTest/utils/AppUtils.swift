@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class AppUtils {
+
+    static let screenWidth : CGFloat = UIScreen.main.bounds.size.width
+
+    static let screenHeight : CGFloat = UIScreen.main.bounds.size.height 
 
     static func readJSONFromFile(fileName: String) -> Any?
     {

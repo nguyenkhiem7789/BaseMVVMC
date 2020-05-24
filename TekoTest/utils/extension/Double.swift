@@ -15,7 +15,7 @@ extension Double {
     func formatnumber() -> String? {
         let formater = NumberFormatter()
         formater.numberStyle = .decimal
-        formater.locale = Locale.init(identifier: "vi_VN")
+        formater.locale = Locale.current
         return formater.string(from: NSNumber(value: self))
     }
 

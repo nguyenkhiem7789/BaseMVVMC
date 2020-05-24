@@ -36,6 +36,17 @@ class ProductListingViewController: UIViewController {
 
     var delegate: ProductListingDelegate?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = "0xE63B0F".colorWithHexString()
+        }
+    }
+
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
         self.tableView.dataSource = self

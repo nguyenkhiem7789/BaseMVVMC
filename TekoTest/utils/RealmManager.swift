@@ -22,6 +22,7 @@ class RealmManager {
         })
     }
 
+    // MARK: - Save a object
     ///delete particular object
     func deleteObject(objs : Object) {
        try? realm?.write ({
@@ -46,18 +47,7 @@ class RealmManager {
         })
     }
 
-     ///Returs an array as Results<object>?
-    func getObjects<T: Object>(type: T.Type) -> [T]? {
-        if let results = realm?.objects(type) {
-            return Array(results)
-        }
-        return nil
-    }
-
-    func getObjectsResults(type: Object.Type) -> Results<Object>? {
-        return realm?.objects(type)
-    }
-
+    // MARK: - Save array objects
     ///Save a list object
     func saveArrayObject(objs: [Object]) {
         try? realm?.write ({
@@ -85,6 +75,18 @@ class RealmManager {
         try? realm?.write {
             realm?.delete(objectsRealmList)
         }
+    }
+
+    // MARK: - get array object
+    func getObjects<T: Object>(type: T.Type) -> [T]? {
+        if let results = realm?.objects(type) {
+            return Array(results)
+        }
+        return nil
+    }
+
+    func getObjectsResults(type: Object.Type) -> Results<Object>? {
+        return realm?.objects(type)
     }
 
 }

@@ -63,6 +63,7 @@ class ProductDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         initView()
+        getDataCache()
         setupBinding()
         loadData()
     }
@@ -98,6 +99,14 @@ class ProductDetailViewController: UIViewController {
         genericProductsView.dataSource = self
         let nib = UINib(nibName: "ProductGenericViewCell", bundle: nil)
         genericProductsView.register(nib, forCellWithReuseIdentifier: "ProductGenericViewCell")
+    }
+
+    ///display data from Realm
+    private func getDataCache() {
+        guard sku != nil else { return }
+        if let product = RealmManager.shared.getObjects(type: Product.self)?.filter({$0.sku == self.sku}) {
+            self.self.fillData(product: product[0])
+        }
     }
 
     private func loadData() {

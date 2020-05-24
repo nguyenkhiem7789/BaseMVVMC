@@ -175,10 +175,8 @@ class ProductDetailViewController: UIViewController {
         if arrayImage.count > 0 {
             imageSlideEmpryView.isHidden = true
             for i in 0 ..< arrayImage.count {
-                if let path = arrayImage[i].url {
-                    if let sourceImage = KingfisherSource(urlString: path) {
-                        arraySource.append(sourceImage)
-                    }
+                if let sourceImage = KingfisherSource(urlString: arrayImage[i].url) {
+                    arraySource.append(sourceImage)
                 }
             }
             let pageIndicator = UIPageControl()

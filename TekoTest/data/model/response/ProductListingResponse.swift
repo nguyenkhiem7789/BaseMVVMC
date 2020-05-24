@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import RealmSwift
 
 struct ProductListingResponse {
 
@@ -41,24 +42,21 @@ struct ProuductResult {
 
 }
 
-struct Product {
+class Product: Object {
 
-    var sku: String?
+    @objc dynamic var sku: String = ""
 
-    var name: String?
+    @objc dynamic var name: String = ""
 
     var price: ProductPrice?
 
     var arrayImage: [ProductImage]?
 
-    init(json: JSON) {
-
-        sku = json["sku"].string
-
-        name = json["name"].string
-
+    convenience init(json: JSON) {
+        self.init()
+        sku = json["sku"].string ?? ""
+        name = json["name"].string ?? ""
         price = ProductPrice(json: json["price"])
-
         if let arrayImageJson = json["images"].array {
            arrayImage = [ProductImage]()
            for dataJson in arrayImageJson {
@@ -70,28 +68,30 @@ struct Product {
 
 }
 
-struct ProductImage {
+class ProductImage: Object {
 
-    var url: String?
+    @objc dynamic var url: String = ""
 
-    var priority: Int?
+    @objc dynamic var priority: Int = 0
 
-    init(json: JSON) {
-        url = json["url"].string
-        priority = json["priority"].int
+    convenience init(json: JSON) {
+        self.init()
+        url = json["url"].string ?? ""
+        priority = json["priority"].int ?? 0
     }
 
 }
 
-struct ProductPrice {
+class ProductPrice: Object {
 
-    var supplierSalePrice: Double?
+    @objc dynamic var supplierSalePrice: Double = 0.0
 
-    var sellPrice: Double?
+    @objc dynamic var sellPrice: Double = 0.0
 
-    init(json: JSON) {
-        supplierSalePrice = json["supplierSalePrice"].double
-        sellPrice = json["sellPrice"].double
+    convenience init(json: JSON) {
+        self.init()
+        supplierSalePrice = json["supplierSalePrice"].double ?? 0.0
+        sellPrice = json["sellPrice"].double ?? 0.0
     }
 
 }

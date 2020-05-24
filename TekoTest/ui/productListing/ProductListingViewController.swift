@@ -171,9 +171,7 @@ extension ProductListingViewController: UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let sku = arrayProduct[indexPath.item].sku {
-            self.delegate?.openProductDetailScreen(sku: sku)
-        }
+        self.delegate?.openProductDetailScreen(sku: arrayProduct[indexPath.item].sku)
     }
 
 }

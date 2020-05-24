@@ -29,8 +29,8 @@ class RealmManager {
        })
     }
 
-    ///Save array of objects to database
-    func saveObjects(objs: Object) {
+    ///Save  object to database
+    func saveObject(objs: Object) {
         try? realm?.write ({
             /// If update = false, adds the object
             realm?.add(objs)
@@ -38,7 +38,7 @@ class RealmManager {
     }
 
     /// editing the object
-    func editObjects(objs: Object) {
+    func editObject(objs: Object) {
         try? realm?.write ({
             /// If update = true, objects that are already in the Realm will be
             /// updated instead of added a new.
@@ -47,8 +47,34 @@ class RealmManager {
     }
 
      ///Returs an array as Results<object>?
-    func getObjects(type: Object.Type) -> Results<Object>? {
-        return realm?.objects(type)
+    func getObjects<T: Object>(type: T.Type) -> [T]? {
+        return realm?.objects(type).toArray(type: type)
+    }
+
+//    func getObjects(type: Object.Type) -> Results<Object>? {
+//        return realm?.objects(type)
+//    }
+
+    ///Save a list object
+    func saveListObject(objsArray: [Object]) {
+        let objectsRealmList = List<Object>()
+        for object in objsArray {
+            objectsRealmList.append(object)
+        }
+        try? realm?.write {
+            realm?.add(objectsRealmList)
+        }
+    }
+
+    ///Remove a list object
+    func deleteListObject(objsArray: [Object]) {
+        let objectsRealmList = List<Object>()
+        for object in objsArray {
+            objectsRealmList.append(object)
+        }
+        try? realm?.write {
+            realm?.delete(objectsRealmList)
+        }
     }
 
 }

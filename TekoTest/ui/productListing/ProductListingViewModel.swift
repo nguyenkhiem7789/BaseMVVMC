@@ -28,6 +28,7 @@ class ProductListingViewModel: BaseViewModel {
             let response = ProductListingResponse(json: json)
             if let code = response.code, code == "SUCCESS" {
                 if let arrayProduct = response.result?.arrayProduct {
+                    RealmManager.shared.saveObject(objs: arrayProduct[0])
                     self.arrayProduct.onNext(arrayProduct)
                 } else if let errorMsg = response.errorMsg {
                    self.errorMsg.onNext(errorMsg)

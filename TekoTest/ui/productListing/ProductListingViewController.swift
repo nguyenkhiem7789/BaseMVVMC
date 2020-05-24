@@ -50,7 +50,7 @@ class ProductListingViewController: UIViewController {
         tableView.addInfiniteScrollingWithHandler {
             self.loadData(query: self.query)
         }
-
+        getDataCache()
         setupBinding()
         Loading.shared.show()
         loadData(query: self.query)
@@ -66,6 +66,15 @@ class ProductListingViewController: UIViewController {
         request.page = currentPage
         request.limit = PAGE_SIZE
         viewModel?.getListProduct(request: request)
+    }
+
+    private func getDataCache() {
+        if let arrayProduct = RealmManager.shared.getObjects(type: Product.self) {
+            self.arrayProduct = arrayProduct
+            self.tableView.reloadData()
+        }
+//        let count = RealmManager.shared.getObjects(type: Product.self)?.count
+//        print("XXXcount = \(count)")
     }
 
     private func setupBinding() {
@@ -96,15 +105,16 @@ class ProductListingViewController: UIViewController {
         .subscribe(onNext: {
             [weak self](arrayProduct) in
             guard let self = self else { return }
-            if self.currentPage == 1 {
-                self.arrayProduct.removeAll()
-            }
-            self.currentPage += 1
-            self.arrayProduct.append(contentsOf: arrayProduct)
-            self.tableView.reloadData()
-            self.checkDisplayEmptyView()
+            self.getDataCache()
+//            if self.currentPage == 1 {
+//                self.arrayProduct.removeAll()
+//                RealmManager.shared.deleteListObject(objsArray: self.arrayProduct)
+//            }
+//            self.currentPage += 1
+//            self.arrayProduct.append(contentsOf: arrayProduct)
+//            self.tableView.reloadData()
+//            self.checkDisplayEmptyView()
         }).disposed(by: disposeBag)
-
     }
 
     ///listener search

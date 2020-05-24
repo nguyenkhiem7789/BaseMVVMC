@@ -81,6 +81,7 @@
 		18E6324D247A5B8F00194C34 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6324B247A5B8F00194C34 /* NumberView.swift */; };
 		18E6324F247A60EF00194C34 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6324E247A60EF00194C34 /* DesignableView.swift */; };
 		18E63253247A79BC00194C34 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E63252247A79BC00194C34 /* RealmManager.swift */; };
+		18E63259247A828200194C34 /* RealmSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E63258247A828200194C34 /* RealmSwift.swift */; };
 		77E369B2DA895D62B67A0895 /* Pods_TekoTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB513F92C4923045A8127018 /* Pods_TekoTest.framework */; };
 		B7071E672C3E150C945E8926 /* Pods_TekoTest_TekoTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9F79F8E6D233A2397C6BB2 /* Pods_TekoTest_TekoTestUITests.framework */; };
 /* End PBXBuildFile section */
@@ -186,6 +187,7 @@
 		18E6324B247A5B8F00194C34 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
 		18E6324E247A60EF00194C34 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		18E63252247A79BC00194C34 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		18E63258247A828200194C34 /* RealmSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSwift.swift; sourceTree = "<group>"; };
 		33FD3697612B3B39DF078AD9 /* Pods-TekoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTestTests.release.xcconfig"; path = "Target Support Files/Pods-TekoTestTests/Pods-TekoTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C3C77721CF37BD4D642092F /* Pods-TekoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TekoTestTests/Pods-TekoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4363DF922FF34438DC03336A /* Pods-TekoTest-TekoTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoTest-TekoTestUITests.release.xcconfig"; path = "Target Support Files/Pods-TekoTest-TekoTestUITests/Pods-TekoTest-TekoTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		1809A4EB24769FC800BABBDE /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				18E63258247A828200194C34 /* RealmSwift.swift */,
 				188D74EF2477B76900C7BC09 /* String.swift */,
 				188D74F12477B79D00C7BC09 /* UIView.swift */,
 				188D74F72477FE3000C7BC09 /* Double.swift */,
@@ -841,6 +844,7 @@
 				1809A4CB24769A2300BABBDE /* CommonError.swift in Sources */,
 				1809A4CC24769A2300BABBDE /* ClientApi.swift in Sources */,
 				18C6808C2479361600EBABF2 /* ProductInfoViewController.swift in Sources */,
+				18E63259247A828200194C34 /* RealmSwift.swift in Sources */,
 				18C680892479134B00EBABF2 /* DesignableUILabel.swift in Sources */,
 				188D74E724777BAE00C7BC09 /* ProductListingResponse.swift in Sources */,
 				18C6807F2478C60900EBABF2 /* ProductDetailViewController.swift in Sources */,

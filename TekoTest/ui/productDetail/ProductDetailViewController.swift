@@ -66,10 +66,7 @@ class ProductDetailViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
-            statusBar.backgroundColor = UIColor.white
-        }
+        setStatusBarColor(color: UIColor.white)
     }
 
     override func viewDidLoad() {

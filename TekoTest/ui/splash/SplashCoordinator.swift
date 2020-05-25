@@ -10,25 +10,25 @@ import UIKit
 
 final class SplashCoordinator: Coordinator {
 
-    fileprivate var isLoggedIn = false
+    let navigationController: UINavigationController
 
-    var splashViewController: SplashViewController?
-
-    init() {
-        start()
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
 
     func start() {
-        splashViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashViewController") as? SplashViewController
-        splashViewController?.delegate = self
+        showSplashViewController()
     }
 
-    func getSplashViewController() -> SplashViewController? {
-        return splashViewController
+    func showSplashViewController() {
+        if let splashViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashViewController") as? SplashViewController {
+            splashViewController.delegate = self
+            navigationController.pushViewController(splashViewController, animated: true)
+        }
     }
 
     func showProductListingViewController() {
-        let coordinator = ProductListingCoordinator(navigationController: splashViewController?.navigationController)
+        let coordinator = ProductListingCoordinator(navigationController: navigationController)
         coordinator.start()
     }
 

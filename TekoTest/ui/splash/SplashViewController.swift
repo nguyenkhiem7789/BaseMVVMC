@@ -16,8 +16,7 @@ class SplashViewController: UIViewController {
     var delegate: SplashViewControllerDelegate?
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        super.viewDidLoad()        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             if self.delegate == nil {
                 print("Xshow => A")

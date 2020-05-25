@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		17299D305E7E44E4307B7BE8 /* Pods_TekoTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB98705E0B3004AE3272E894 /* Pods_TekoTestTests.framework */; };
 		1809A4902476974D00BABBDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A48F2476974D00BABBDE /* AppDelegate.swift */; };
-		1809A4922476974D00BABBDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4912476974D00BABBDE /* SceneDelegate.swift */; };
 		1809A4942476974D00BABBDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4932476974D00BABBDE /* ViewController.swift */; };
 		1809A4972476974D00BABBDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1809A4952476974D00BABBDE /* Main.storyboard */; };
 		1809A4992476975200BABBDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1809A4982476975200BABBDE /* Assets.xcassets */; };
@@ -36,6 +35,7 @@
 		1809A4FA2476A2F100BABBDE /* ProductListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4F92476A2F100BABBDE /* ProductListingCoordinator.swift */; };
 		1809A4FC2476A43100BABBDE /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FB2476A43100BABBDE /* Localizable.swift */; };
 		1809A4FE2476A4E700BABBDE /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */; };
+		1871BF0D247B754600FB0608 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871BF0C247B754600FB0608 /* UIViewController.swift */; };
 		188D74DA2477609C00C7BC09 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188D74DC2477609C00C7BC09 /* Localizable.strings */; };
 		188D74E0247761A100C7BC09 /* ProductListingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D74DE247761A100C7BC09 /* ProductListingViewCell.swift */; };
 		188D74E1247761A100C7BC09 /* ProductListingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188D74DF247761A100C7BC09 /* ProductListingViewCell.xib */; };
@@ -106,7 +106,6 @@
 /* Begin PBXFileReference section */
 		1809A48C2476974D00BABBDE /* TekoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1809A48F2476974D00BABBDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1809A4912476974D00BABBDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1809A4932476974D00BABBDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1809A4962476974D00BABBDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1809A4982476975200BABBDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		1809A4F92476A2F100BABBDE /* ProductListingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingCoordinator.swift; sourceTree = "<group>"; };
 		1809A4FB2476A43100BABBDE /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
+		1871BF0C247B754600FB0608 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		188D74DB2477609C00C7BC09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		188D74DD2477609F00C7BC09 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		188D74DE247761A100C7BC09 /* ProductListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingViewCell.swift; sourceTree = "<group>"; };
@@ -256,7 +256,6 @@
 				1809A4CD24769C2700BABBDE /* ui */,
 				1809A4BF2476997000BABBDE /* data */,
 				1809A48F2476974D00BABBDE /* AppDelegate.swift */,
-				1809A4912476974D00BABBDE /* SceneDelegate.swift */,
 				1809A4932476974D00BABBDE /* ViewController.swift */,
 				1809A4982476975200BABBDE /* Assets.xcassets */,
 				1809A49A2476975200BABBDE /* LaunchScreen.storyboard */,
@@ -426,6 +425,7 @@
 		1809A4EB24769FC800BABBDE /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				1871BF0C247B754600FB0608 /* UIViewController.swift */,
 				188D74EF2477B76900C7BC09 /* String.swift */,
 				188D74F12477B79D00C7BC09 /* UIView.swift */,
 				188D74F72477FE3000C7BC09 /* Double.swift */,
@@ -856,6 +856,7 @@
 				188D74F62477FA0A00C7BC09 /* PromotionView.swift in Sources */,
 				1809A4F62476A2BC00BABBDE /* ProductListingViewController.swift in Sources */,
 				1809A4F82476A2D200BABBDE /* ProductListingViewModel.swift in Sources */,
+				1871BF0D247B754600FB0608 /* UIViewController.swift in Sources */,
 				1809A4942476974D00BABBDE /* ViewController.swift in Sources */,
 				18C6807B2478715500EBABF2 /* Reactive.swift in Sources */,
 				1809A4D224769C8F00BABBDE /* BaseViewModel.swift in Sources */,
@@ -870,7 +871,6 @@
 				1809A4FA2476A2F100BABBDE /* ProductListingCoordinator.swift in Sources */,
 				18C680AD247A015C00EBABF2 /* ProductCompare.swift in Sources */,
 				1809A4E624769EB000BABBDE /* EmptyView.swift in Sources */,
-				1809A4922476974D00BABBDE /* SceneDelegate.swift in Sources */,
 				188D74E0247761A100C7BC09 /* ProductListingViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

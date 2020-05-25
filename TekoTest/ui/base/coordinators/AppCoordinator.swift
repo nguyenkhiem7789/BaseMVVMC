@@ -30,10 +30,10 @@ final class AppCoordinator {
     }
 
     fileprivate func showSplashScreen() {
-        let splashCoordinator = SplashCoordinator()
+        let splashCoordinator = SplashCoordinator(navigationController: navigationController)
         splashCoordinator.start()
     }
 
-    
+
 }
 

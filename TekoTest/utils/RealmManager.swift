@@ -58,8 +58,7 @@ class RealmManager {
 
     ///Remove a array object
     func deleteArrayObject(objs: [Object]) {
-        try? realm?.write ({
-            print("XXXX => delete array")
+        try? realm?.write ({            
              realm?.delete(objs)
         })
     }

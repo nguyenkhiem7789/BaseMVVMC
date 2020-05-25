@@ -112,6 +112,10 @@ class DesignableTextField: UITextField {
         })
     }
 
+//    override func layoutSubviews() {
+//        rightImageView.frame = CGRect(x: self.frame.size.width - widthImage, y: 0.0, width: widthImage, height: self.frame.size.height)
+//    }
+
     func displayRightImageView(isDisplay: Bool) {
         if isDisplay {
             self.rightView = rightPaddingView

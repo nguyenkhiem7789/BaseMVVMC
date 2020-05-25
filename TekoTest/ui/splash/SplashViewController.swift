@@ -17,12 +17,7 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if self.delegate == nil {
-                print("Xshow => A")
-            } else {
-                print("Xshow => B")
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {            
             self.delegate?.showProductListingScreen()
         }
     }

@@ -117,8 +117,9 @@ class ProductListingViewController: UIViewController {
             [weak self](arrayProduct) in
             guard let self = self else { return }
             if self.currentPage == 1 {
+                print("XarrayProduct count = \(self.arrayProduct.count)")
+                RealmManager.shared.deleteArrayObject(objs: self.arrayProduct)
                 self.arrayProduct.removeAll()
-                RealmManager.shared.deleteListObject(objsArray: self.arrayProduct)
             }
             DispatchQueue.main.async {
                 RealmManager.shared.saveArrayObject(objs: arrayProduct)

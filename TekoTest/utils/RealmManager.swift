@@ -56,25 +56,12 @@ class RealmManager {
         })
     }
 
-    func saveListObject(objsArray: [Object]) {
-        let objectsRealmList = List<Object>()
-        for object in objsArray {
-            objectsRealmList.append(object)
-        }
-        try? realm?.write {
-            realm?.add(objectsRealmList)
-        }
-    }
-
-    ///Remove a list object
-    func deleteListObject(objsArray: [Object]) {
-        let objectsRealmList = List<Object>()
-        for object in objsArray {
-            objectsRealmList.append(object)
-        }
-        try? realm?.write {
-            realm?.delete(objectsRealmList)
-        }
+    ///Remove a array object
+    func deleteArrayObject(objs: [Object]) {
+        try? realm?.write ({
+            print("XXXX => delete array")
+             realm?.delete(objs)
+        })
     }
 
     // MARK: - get array object

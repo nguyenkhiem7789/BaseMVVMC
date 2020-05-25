@@ -22,7 +22,7 @@ class ProductListingCoordinator: Coordinator {
     }
 
     func showProductListingViewController() {
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductListingViewController") as? ProductListingViewController {
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductListingViewController") as? ProductListingViewController {            
             viewController.delegate = self
             let viewModel = ProductListingViewModel()
             viewController.viewModel = viewModel

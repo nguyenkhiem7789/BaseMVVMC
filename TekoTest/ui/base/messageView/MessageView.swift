@@ -92,8 +92,7 @@ class MessageView: UIView {
         UIView.animate(withDuration: 0.2, animations: {
 //            self.maskingView.backgroundColor = .clear
             self.frame.origin.y -= 80
-        }) { (_) in
-            print("XXXX ==> hide 111")
+        }) { (_) in            
 //            self.maskingView.removeFromSuperview()
             self.removeFromSuperview()
         }

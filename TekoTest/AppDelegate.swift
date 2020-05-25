@@ -43,6 +43,9 @@ extension AppDelegate {
         let navigationController = UINavigationController()
         let splashCoordinator = SplashCoordinator()
         if let viewController = splashCoordinator.getSplashViewController() {
+            if viewController.delegate != nil {
+                print("Xshow start 2 => NOT NILL")
+            }
             navigationController.pushViewController(viewController, animated: false)
         }
         self.window?.rootViewController = navigationController

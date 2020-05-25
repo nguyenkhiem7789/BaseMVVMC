@@ -12,11 +12,11 @@ We have to add a new layer to get the power of MVVM and routing in the same patt
 
 # What does the project have?
 
-_ Use architectural pattern MVVM-C
-_ Use Alamofile, SwiftyJSON to load and parse data from server.
-_ Use RxSwift to databiding.
-_ Use RealmSwift to cache data.
-_ Use Kingfisher to load and cache image.
+    _ Use architectural pattern MVVM-C
+    _ Use Alamofile, SwiftyJSON to load and parse data from server.
+    _ Use RxSwift to databiding.
+    _ Use RealmSwift to cache data.
+    _ Use Kingfisher to load and cache image.
 
 This is demo: 
 https://www.youtube.com/watch?v=8zYdC6dKYDg

@@ -112,9 +112,10 @@ class DesignableTextField: UITextField {
         })
     }
 
-//    override func layoutSubviews() {
-//        rightImageView.frame = CGRect(x: self.frame.size.width - widthImage, y: 0.0, width: widthImage, height: self.frame.size.height)
-//    }
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        rightImageView.frame = CGRect(x: self.frame.size.width - widthImage, y: 0.0, width: widthImage, height: self.frame.size.height)
+        return CGRect(x: self.frame.size.width - widthImage, y: 0.0, width: widthImage, height: self.frame.size.height)
+    }
 
     func displayRightImageView(isDisplay: Bool) {
         if isDisplay {

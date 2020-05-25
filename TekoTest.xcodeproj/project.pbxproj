@@ -36,6 +36,7 @@
 		1809A4FC2476A43100BABBDE /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FB2476A43100BABBDE /* Localizable.swift */; };
 		1809A4FE2476A4E700BABBDE /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */; };
 		1871BF0D247B754600FB0608 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871BF0C247B754600FB0608 /* UIViewController.swift */; };
+		1871BF0F247BA54F00FB0608 /* NSLayoutDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871BF0E247BA54F00FB0608 /* NSLayoutDimension.swift */; };
 		188D74DA2477609C00C7BC09 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188D74DC2477609C00C7BC09 /* Localizable.strings */; };
 		188D74E0247761A100C7BC09 /* ProductListingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D74DE247761A100C7BC09 /* ProductListingViewCell.swift */; };
 		188D74E1247761A100C7BC09 /* ProductListingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188D74DF247761A100C7BC09 /* ProductListingViewCell.xib */; };
@@ -138,6 +139,7 @@
 		1809A4FB2476A43100BABBDE /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		1809A4FD2476A4E700BABBDE /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		1871BF0C247B754600FB0608 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		1871BF0E247BA54F00FB0608 /* NSLayoutDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutDimension.swift; sourceTree = "<group>"; };
 		188D74DB2477609C00C7BC09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		188D74DD2477609F00C7BC09 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		188D74DE247761A100C7BC09 /* ProductListingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingViewCell.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				188D74F12477B79D00C7BC09 /* UIView.swift */,
 				188D74F72477FE3000C7BC09 /* Double.swift */,
 				18C6807A2478715500EBABF2 /* Reactive.swift */,
+				1871BF0E247BA54F00FB0608 /* NSLayoutDimension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -866,6 +869,7 @@
 				18C68094247938C200EBABF2 /* ProductDescriptionViewController.swift in Sources */,
 				188D74EE2477932F00C7BC09 /* MessageView.swift in Sources */,
 				188D74E9247788E900C7BC09 /* ProductListingRequest.swift in Sources */,
+				1871BF0F247BA54F00FB0608 /* NSLayoutDimension.swift in Sources */,
 				18C680852478E0E300EBABF2 /* ProductDetailRequest.swift in Sources */,
 				18C680762478284800EBABF2 /* ICSPullToRefresh.swift in Sources */,
 				1809A4FA2476A2F100BABBDE /* ProductListingCoordinator.swift in Sources */,

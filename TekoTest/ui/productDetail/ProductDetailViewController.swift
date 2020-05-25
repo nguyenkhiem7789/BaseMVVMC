@@ -62,7 +62,7 @@ class ProductDetailViewController: UIViewController {
     var arrayGenericProsucts = [ProductGeneric]()
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
+        return .lightContent
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +70,11 @@ class ProductDetailViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         initView()
         getDataCache()
         setupBinding()

@@ -45,6 +45,11 @@ class ProductListingViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         self.navigationController?.isNavigationBarHidden = true
         self.tableView.dataSource = self
         self.tableView.delegate = self

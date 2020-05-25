@@ -28,8 +28,12 @@ class ProductGenericViewCell: UICollectionViewCell {
     }
 
     func fillData(generic: ProductGeneric) {
+//        if let image = generic.image, let url = URL(string: image) {
+//            genericImageView.kf.setImage(with: url, placeholder: UIImage(named: "empty"))
+//        }
         if let image = generic.image, let url = URL(string: image) {
-            genericImageView.kf.setImage(with: url)
+            let resource = ImageResource(downloadURL: url, cacheKey: image)
+            genericImageView.kf.setImage(with: resource, placeholder: UIImage(named: "empty"))
         }
         nameLabel.text = generic.name
         if let finalPrice = generic.finalPrice {

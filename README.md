@@ -1,4 +1,4 @@
-# TekoTest
+# BaseMVVMC
 
 When you have to choose an architectural pattern, you have the challenge to understand which one suits better your needs. 
 Among these patterns, MVVM is one of the best choices since it’s very powerful and easy to use at the same time.
